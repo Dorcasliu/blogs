@@ -1,0 +1,15 @@
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+<p><%= homeText %></p>
+
+<%# for(i=0;i<getPost.length;i++){  %>
+<% getPost.forEach(function(post){ %>
+<h1><%=post.title %></h1>
+<p><%=post.content.substring(0,100)+" ... " %>
+  <a href="/posts/<%= post.title%>">ReadMore</a>
+</p>
+<% }); %>
+
+<%# var myTruncatedString = myString.substring(0,length); %>
+<%- include("partials/footer") -%>
